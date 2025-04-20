@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Search Bar</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+
+    .search-container {
+      max-width: 500px;
+      margin: 0 auto 30px auto;
+      position: relative;
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 12px 40px 12px 45px;
+      font-size: 16px;
+      border-radius: 30px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      font-size: 18px;
+      color: #888;
+    }
+
+    .clear-btn {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      color: #aaa;
+      cursor: pointer;
+    }
+
+    .clear-btn:hover {
+      color: #333;
+    }
+
+    .items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .item {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 200px;
+      text-align: center;
+      font-size: 18px;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    .hidden {
+      opacity: 0;
+      pointer-events: none;
+      height: 0;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .no-results {
+      text-align: center;
+      color: #999;
+      margin-top: 20px;
+      font-size: 18px;
+      display: none;
+    }
+
+    @media(max-width: 600px) {
+      .item {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="search-container">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search for items..." onkeyup="searchItems()">
+    <button class="clear-btn" onclick="clearSearch()">✕</button>
+  </div>
+
+  <div class="items" id="itemsList">
+    <div class="item"  onclick="window.location.href='product.html'"   style="cursor: pointer; padding: 20px; background: #e0f7ff;">
+        Apple</div>
+    <div class="item"  onclick="window.location.href='product.html'"   style="cursor: pointer; padding: 20px; background: #e0f7ff;">
+        Banana</div>
+    <div class="item"  onclick="window.location.href='product.html'"  style="cursor: pointer; padding: 20px; background: #e0f7ff;">
+        Carrot</div>
+    <div class="item"  onclick="window.location.href='product.html'"  style="cursor: pointer; padding: 20px; background: #e0f7ff;">
+        Broccoli</div>
+    <div class="item"  onclick="window.location.href='product.html'"  style="cursor: pointer; padding: 20px; background: #e0f7ff;">
+        Mango</div>
+    <div class="item"  onclick="window.location.href='product.html'"  style="cursor: pointer; padding: 20px; background: #e0f7ff;">
+        Spinach</div>
+    <div class="item"  onclick="window.location.href='product.html'"  style="cursor: pointer; padding: 20px; background: #e0f7ff;">
+        Orange</div>
+    <div class="item"  onclick="window.location.href='product.html'"  style="cursor: pointer; padding: 20px; background: #e0f7ff;">
+        Tomato</div>
+  </div>
+
+  <div class="no-results" id="noResults">No items found.</div>
+
+  <script>
+    function searchItems() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const items = document.querySelectorAll('.item');
+      let anyVisible = false;
+
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(input)) {
+          item.classList.remove('hidden');
+          anyVisible = true;
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+
+      document.getElementById('noResults').style.display = anyVisible ? 'none' : 'block';
+    }
+
+    function clearSearch() {
+      document.getElementById('searchInput').value = '';
+      searchItems();
+      document.getElementById('searchInput').focus();
+    }
+  </script>
+
+</body>
+</html>

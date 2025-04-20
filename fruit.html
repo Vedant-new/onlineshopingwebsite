@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fruit Section</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fefefe;
+      padding: 20px;
+    }
+
+    .fruit-section {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .fruit-card {
+      width: 150px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #f0fff4;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .fruit-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .fruit-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🍓 Fruit Section</h2>
+
+  <div class="fruit-section">
+    <div class="fruit-card" onclick="window.location.href='product.html'">
+      <img src="https://img.icons8.com/color/96/apple.png" alt="Apple">
+      <strong>Apple</strong>
+    </div>
+    <div class="fruit-card" onclick="window.location.href='product.html'">
+      <img src="https://img.icons8.com/color/96/banana.png" alt="Banana">
+      <strong>Banana</strong>
+    </div>
+    <div class="fruit-card" onclick="window.location.href='product.html'">
+      <img src="https://img.icons8.com/color/96/orange.png" alt="Orange">
+      <strong>Orange</strong>
+    </div>
+    <div class="fruit-card" onclick="window.location.href='product.html'">
+      <img src="https://img.icons8.com/color/96/strawberry.png" alt="Strawberry">
+      <strong>Strawberry</strong>
+    </div>
+  </div>
+
+  <script>
+    function selectFruit(fruitName) {
+      alert(`You selected: ${fruitName}`);
+      // You can also: add to cart, show more info, etc.
+    }
+  </script>
+
+</body>
+</html>

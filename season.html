@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Summer Produce</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fffdf5;
+      padding: 30px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .section h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #ff6600;
+    }
+
+    .item-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .item-card {
+      width: 150px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #fdf8ee;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .item-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .item-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🍉 Summer Fruits -->
+  <div class="section">
+    <h2>🍉 Summer Fruits</h2>
+    <div class="item-grid">
+      <div class="item-card"onclick="window.location.href='product.html'"">
+        <img src="https://img.icons8.com/color/96/watermelon.png" alt="Watermelon">
+        <strong>Watermelon</strong>
+      </div>
+      <div class="item-card"onclick="window.location.href='product.html'">
+        <img src="https://img.icons8.com/color/96/mango.png" alt="Mango">
+        <strong>Mango</strong>
+      </div>
+      <div class="item-card" onclick="window.location.href='product.html'">
+        <img src="https://img.icons8.com/color/96/pineapple.png" alt="Pineapple">
+        <strong>Pineapple</strong>
+      </div>
+      <div class="item-card" onclick="window.location.href='product.html'">
+        <img src="https://img.icons8.com/color/96/lychee.png" alt="Lychee">
+        <strong>Lychee</strong>
+      </div>
+      <div class="item-card" onclick="window.location.href='product.html'">
+        <img src="https://img.icons8.com/color/96/papaya.png" alt="Papaya">
+        <strong>Papaya</strong>
+      </div>
+      <div class="item-card" onclick="window.location.href='product.html'">
+        <img src="https://cdn.pixabay.com/photo/2023/07/16/08/24/guava-8130276_640.png" alt="Guava">
+        <strong>Guava</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🥒 Summer Vegetables -->
+  <div class="section">
+    <h2>🥒 Summer Vegetables</h2>
+    <div class="item-grid">
+      <div class="item-card" onclick="window.location.href='product.html'">
+        <img src="https://i.pinimg.com/736x/ce/8b/a0/ce8ba05e13fbcaf4965fedcb27e014ad.jpg" alt="Cucumber">
+        <strong>Cucumber</strong>
+      </div>
+      <div class="item-card"onclick="window.location.href='product.html'">
+        <img src="https://img.icons8.com/color/96/zucchini.png" alt="Bottle Gourd">
+        <strong>Bottle Gourd</strong>
+      </div>
+      <div class="item-card"onclick="window.location.href='product.html'">
+        <img src="https://media.istockphoto.com/id/508497570/photo/fresh-young-okra.jpg?s=612x612&w=0&k=20&c=dLCVaTP7HSIkDptpY0MKZPJWpaGICTmPi5Z9YaeX29U=" alt="Okra">
+        <strong>Okra</strong>
+      </div>
+      <div class="item-card"onclick="window.location.href='product.html'">
+        <img src="https://img.icons8.com/color/96/tomato.png" alt="Tomato">
+        <strong>Tomato</strong>
+      </div>
+      <div class="item-card" onclick="window.location.href='product.html'">
+        <img src="https://st2.depositphotos.com/3647713/6958/i/450/depositphotos_69587953-stock-photo-green-beans-isolated.jpg" alt="Green Beans">
+        <strong>Green Beans</strong>
+      </div>
+      <div class="item-card" onclick="window.location.href='product.html'">
+        <img src="https://img.icons8.com/color/96/spinach.png" alt="Spinach">
+        <strong>Spinach</strong>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function selectItem(itemName) {
+      alert(`You selected: ${itemName}`);
+      // Here you can redirect, store in cart, or show product page
+    }
+  </script>
+
+</body>png
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vegetable Section</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fefefe;
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+    }
+
+    .item-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .item-card {
+      width: 150px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #f4fff4;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .item-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .item-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🥦 Vegetable Section -->
+  <div class="section">
+    <h2>🥦 Vegetable Section</h2>
+    <div class="item-grid">
+      <div class="item-card" onclick="window.location.href='product.html'">
+        <img src="https://img.icons8.com/color/96/carrot.png" alt="Carrot">
+        <strong>Carrot</strong>
+      </div>
+      <div class="item-card" onclick="window.location.href='product.html'">
+        <img src="https://img.icons8.com/color/96/broccoli.png" alt="Broccoli">
+        <strong>Broccoli</strong>
+      </div>
+      <div class="item-card" onclick="window.location.href='product.html'">
+        <img src="https://img.icons8.com/color/96/corn.png" alt="Corn">
+        <strong>Corn</strong>
+      </div>
+      <div class="item-card" onclick="window.location.href='product.html'">
+        <img src="https://img.icons8.com/color/96/tomato.png" alt="Tomato">
+        <strong>Tomato</strong>
+      </div>
+      <div class="item-card" onclick="window.location.href='product.html'">
+        <img src="https://img.icons8.com/color/96/cucumber.png" alt="Cucumber">
+        <strong>Cucumber</strong>
+      </div>
+      <div class="item-card" onclick="window.location.href='product.html'">
+        <img src="https://img.icons8.com/color/96/onion.png" alt="Onion">
+        <strong>Onion</strong>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function selectItem(itemName) {
+      alert(`You selected: ${itemName}`);
+      // You can redirect or add to cart here
+    }
+  </script>
+
+</body>
+</html>

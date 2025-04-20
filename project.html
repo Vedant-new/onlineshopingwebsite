@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshMarket - Fruits & Vegetables</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-green-50 text-gray-800">
+  <!-- Header -->
+  <header class="flex justify-between items-center p-4 bg-white shadow">
+    <div class="text-2xl font-bold text-green-600">FreshMarket</div>
+    <input  type="text" onclick="window.location.href='search.html'" placeholder="Search fresh product..." class="w-1/2 p-2 border rounded" />
+    <div class="space-x-4">
+      <button onclick="window.location.href='welcome.html'">👤 </button>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-green-100 p-2 text-center space-x-6">
+    <a href="#" class="hover:underline">Home</a>
+
+    <button onclick="window.location.href='op.html'" class="hover:underline">Categories</button>
+    <button onclick="window.location.href='about.html'"class="hover:underline">About</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-cover bg-center h-64 text-white flex items-center justify-center" style="background-image: url('https://via.placeholder.com/1200x300?text=Fresh+Fruits+%26+Veggies');">
+    <div class="text-center bg-green-900 bg-opacity-50 p-6 rounded">
+      <h1 class="text-4xl font-bold mb-2">Fresh & Organic Produce</h1>
+      <button class="mt-2 px-4 py-2 bg-green-500 hover:bg-green-600 rounded text-white"
+    >Shop Now</button>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="p-6 grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div onclick="window.location.href='fruit.html'" 
+    style="cursor: pointer; padding: 33px; background: #e0f7ff;"
+    class="bg-white p-4 rounded shadow text-center">Fruit
+    </div>
+    <div class="bg-white p-4 rounded shadow text-center"
+    onclick="window.location.href='veg.html'" 
+    style="cursor: pointer; padding: 33px; background: #e0f7ff;">Vegetables</div>
+    <div class="bg-white p-4 rounded shadow text-center"
+    onclick="window.location.href='season.html'" 
+    style="cursor: pointer; padding: 33px; background: #e0f7ff;">Seasonal</div>
+  </section>
+
+  <!-- Best Sellers -->
+   
+  <section class="p-6">
+   
+    <h2 class="text-2xl font-semibold mb-4">Best Sellers</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div  onclick="window.location.href='product.html'"
+      style="cursor: pointer; padding: 20px; background: #e0f7ff;"
+        class="bg-white p-4 rounded shadow">
+        <img src="https://static.libertyprim.com/files/familles/pomme-large.jpg?1569271834" alt="Apples" class="mb-2">
+        <h3 class="font-medium">Fresh Apples</h3>
+        <p>150 / kg</p>
+      </div>
+      <div  onclick="window.location.href='product.html'"
+      style="cursor: pointer; padding: 20px; background: #e0f7ff;"
+      class="bg-white p-4 rounded shadow">
+        <img src="https://www.ugaoo.com/cdn/shop/files/8_209ea858-52db-476f-919d-857a374efd4c.jpg?v=1726301064&width=1500" alt="Carrots" class="mb-2">
+        <h3 class="font-medium">Organic Carrots</h3>
+        <p>75 / kg</p>
+      </div>
+      <div  onclick="window.location.href='product.html'"
+      style="cursor: pointer; padding: 20px; background: #e0f7ff;"
+      class="bg-white p-4 rounded shadow">
+        <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFuYW5hc3xlbnwwfHwwfHx8MA%3D%3D" alt="Bananas" class="mb-2">
+        <h3 class="font-medium">Bananas</h3>
+        <p>60rs / dozen</p>
+      </div>
+      <div  onclick="window.location.href='product.html'"
+      style="cursor: pointer; padding: 20px; background: #e0f7ff;"
+      class="bg-white p-4 rounded shadow">
+        <img src="https://seed2plant.in/cdn/shop/products/spinachseeds.jpg?v=1603966262" alt="Spinach" class="mb-2">
+        <h3 class="font-medium">Fresh Spinach</h3>
+        <p>30rs/bunch</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="bg-green-100 p-6 text-center">
+    <h2 class="text-xl font-semibold mb-2">Stay Updated on Fresh Deals</h2>
+    <input type="email" placeholder="Enter your email" class="p-2 rounded border w-1/2" />
+    <button class="ml-2 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Subscribe</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-200 p-6 mt-8 text-center text-sm">
+    <p>&copy; 2025 FreshMarket. All rights reserved.</p>
+    <div class="mt-2 space-x-4">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Help</a>
+    </div>
+  </footer>
+</body>
+</html>
